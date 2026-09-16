@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>支援 / Support — 推肉肉小工具 / Liquify</title>
+<style>
+  :root {
+    --cream: #FAF4DB;
+    --cream-deep: #F2E9C8;
+    --ink: #1E2A24;
+    --ink-soft: #5A6660;
+    --green: #3FA35C;
+    --rule: #E0D7B4;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 40px 20px 80px;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+                 "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    font-size: 17px;
+    line-height: 1.85;
+    letter-spacing: 0.01em;
+  }
+  main { max-width: 42rem; margin: 0 auto; }
+  h1 { font-size: 1.9rem; line-height: 1.35; margin: 0 0 0.4em; letter-spacing: -0.01em; }
+  h2 {
+    font-size: 1.15rem;
+    margin: 2.2em 0 0.4em;
+    padding-top: 1.2em;
+    border-top: 1px solid var(--rule);
+  }
+  section > .contact + h2 { border-top: none; padding-top: 0; }
+  .updated { color: var(--ink-soft); font-size: 0.9rem; margin: 0 0 2.2em; }
+  .contact {
+    background: var(--cream-deep);
+    border-left: 4px solid var(--green);
+    padding: 1.1em 1.3em;
+    margin: 0 0 2.4em;
+    font-size: 1.05rem;
+  }
+  .contact p { margin: 0 0 0.3em; }
+  .contact p:last-child { margin: 0; font-size: 0.92rem; color: var(--ink-soft); }
+  p { margin: 0.3em 0 1em; }
+  strong { font-weight: 600; }
+  a { color: var(--green); }
+
+  /* 沒有 JavaScript 時兩種語言都會顯示。讀得到永遠比好看重要。 */
+  .langs { display: flex; gap: 8px; margin: 0 0 2.4em; flex-wrap: wrap; }
+  .langs button {
+    font: inherit; font-size: 0.9rem; padding: 6px 16px;
+    border: 1px solid var(--rule); border-radius: 4px;
+    background: transparent; color: var(--ink-soft); cursor: pointer;
+  }
+  .langs button[aria-pressed="true"] {
+    background: var(--ink); border-color: var(--ink); color: var(--cream);
+  }
+  section + section { margin-top: 3.5em; }
+
+  footer {
+    margin-top: 4em; padding-top: 1.4em;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-soft); font-size: 0.88rem;
+  }
+  @media (max-width: 480px) {
+    body { padding: 28px 18px 64px; font-size: 16px; }
+    h1 { font-size: 1.55rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <nav class="langs" id="langs" hidden>
+    <button type="button" data-pick="zh" aria-pressed="true">中文</button>
+    <button type="button" data-pick="en" aria-pressed="false">English</button>
+  </nav>
+
+  <!-- ─────────── 繁體中文 ─────────── -->
+  <section data-lang="zh" lang="zh-Hant">
+    <h1>支援</h1>
+    <p class="updated">推肉肉小工具 — 筆刷液化修圖</p>
+
+    <div class="contact">
+      <p><strong>有問題請來信：<a href="mailto:tuiroulo.app@gmail.com">tuiroulo.app@gmail.com</a></strong></p>
+      <p>一個人開發，通常兩到三個工作天內回覆。</p>
+    </div>
+
+    <h2>修好的照片存到哪裡？</h2>
+    <p>存回你的相簿，是一張新的照片，原本那張不會被覆蓋。</p>
+
+    <h2>為什麼存檔按鈕按不了？</h2>
+    <p>存檔只在你實際修改過照片之後才會啟用。如果還沒動過任何一筆，那個按鈕是灰的。</p>
+
+    <h2>今天不能再存檔了？</h2>
+    <p>
+      免費版每天可以存兩張，每天重置。解鎖「無限次匯出」之後就沒有上限。
+      那是一次性買斷，不是訂閱，不會自動續訂。
+    </p>
+
+    <h2>換手機之後購買不見了</h2>
+    <p>
+      開啟 App，修改任一張照片後按存檔叫出購買頁，點最下方的「恢復購買」。
+      只要是同一個 Apple 帳號，就會恢復。
+    </p>
+
+    <h2>照片會被上傳嗎？</h2>
+    <p>
+      不會。所有運算都在你的裝置上完成，這個 App 沒有要求網路權限，
+      也沒有要求讀取你的相簿 —— 它只拿得到你主動選的那一張。
+      詳見<a href="../">隱私權政策</a>。
+    </p>
+
+    <h2>不小心修過頭了</h2>
+    <p>
+      用「還原」筆刷塗回原樣，或按左下角的復原箭頭一步步退回。
+      垃圾桶圖示會清除所有修改，按下去之前會先問你一次。
+    </p>
+
+    <h2>支援哪些裝置？</h2>
+    <p>iOS 17 以上的 iPhone。</p>
+
+    <h2>我要退款</h2>
+    <p>
+      退款由 Apple 處理，不經過我。請到
+      <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> 提出申請。
+    </p>
+  </section>
+
+  <!-- ─────────── English ─────────── -->
+  <section data-lang="en" lang="en">
+    <h1>Support</h1>
+    <p class="updated">Liquify — Body &amp; Face Editor</p>
+
+    <div class="contact">
+      <p><strong>Questions: <a href="mailto:tuiroulo.app@gmail.com">tuiroulo.app@gmail.com</a></strong></p>
+      <p>Built by one person. You'll usually hear back within two or three working days.</p>
+    </div>
+
+    <h2>Where does the edited photo go?</h2>
+    <p>Into your photo library, as a new photo. The original is never overwritten.</p>
+
+    <h2>Why is the Save button greyed out?</h2>
+    <p>Save only becomes available once you've actually changed something. Before your first stroke, it stays disabled.</p>
+
+    <h2>I can't save any more today</h2>
+    <p>
+      The free version saves two photos a day, and the count resets daily.
+      Unlocking unlimited exports removes the limit. It's a one-time purchase,
+      not a subscription, and it does not auto-renew.
+    </p>
+
+    <h2>I got a new phone and my purchase is gone</h2>
+    <p>
+      Open the app, edit any photo and tap Save to bring up the purchase screen,
+      then tap “Restore Purchases” at the bottom. As long as you're signed in with
+      the same Apple Account, it will come back.
+    </p>
+
+    <h2>Are my photos uploaded anywhere?</h2>
+    <p>
+      No. Everything runs on your device. The app asks for no network permission and
+      does not ask to read your photo library — it only ever receives the single photo
+      you pick. See the <a href="../">privacy policy</a>.
+    </p>
+
+    <h2>I went too far with an edit</h2>
+    <p>
+      Use the Restore brush to paint the original back, or tap the undo arrow at the
+      bottom left to step backwards. The trash icon clears everything, and asks you
+      to confirm first.
+    </p>
+
+    <h2>Which devices are supported?</h2>
+    <p>iPhone running iOS 17 or later.</p>
+
+    <h2>I'd like a refund</h2>
+    <p>
+      Refunds are handled by Apple, not by me. Please request one at
+      <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.
+    </p>
+  </section>
+
+  <footer>
+    推肉肉小工具 / Liquify　·　YiHsuan Chen
+  </footer>
+
+</main>
+
+<script>
+  (function () {
+    var nav = document.getElementById('langs');
+    var sections = document.querySelectorAll('section[data-lang]');
+    var buttons = nav.querySelectorAll('button');
+
+    function show(pick) {
+      sections.forEach(function (s) { s.hidden = s.dataset.lang !== pick; });
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.dataset.pick === pick));
+      });
+      document.documentElement.lang = pick === 'zh' ? 'zh-Hant' : 'en';
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { show(b.dataset.pick); });
+    });
+
+    nav.hidden = false;
+    show((navigator.language || 'en').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en');
+  })();
+</script>
+</body>
+</html>
