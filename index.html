@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>隱私權政策 — 推肉肉小工具</title>
+<title>隱私權政策 / Privacy Policy — 推肉肉小工具 / Liquify</title>
 <style>
   :root {
     --cream: #FAF4DB;
@@ -17,7 +17,7 @@
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
-    padding: 48px 20px 80px;
+    padding: 40px 20px 80px;
     background: var(--cream);
     color: var(--ink);
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
@@ -27,24 +27,16 @@
     letter-spacing: 0.01em;
   }
   main { max-width: 42rem; margin: 0 auto; }
-  h1 {
-    font-size: 1.9rem;
-    line-height: 1.35;
-    margin: 0 0 0.4em;
-    letter-spacing: -0.01em;
-  }
+  h1 { font-size: 1.9rem; line-height: 1.35; margin: 0 0 0.4em; letter-spacing: -0.01em; }
   h2 {
     font-size: 1.2rem;
     margin: 2.6em 0 0.6em;
     padding-top: 1.4em;
     border-top: 1px solid var(--rule);
   }
-  h2:first-of-type { border-top: none; padding-top: 0; }
-  .updated {
-    color: var(--ink-soft);
-    font-size: 0.9rem;
-    margin: 0 0 2.6em;
-  }
+  section > h2:first-of-type { border-top: none; padding-top: 0; }
+  h3 { font-size: 1.02rem; margin: 2em 0 0.4em; color: var(--ink); }
+  .updated { color: var(--ink-soft); font-size: 0.9rem; margin: 0 0 2.6em; }
   .summary {
     background: var(--cream-deep);
     border-left: 4px solid var(--green);
@@ -57,6 +49,26 @@
   li { margin: 0.35em 0; }
   strong { font-weight: 600; }
   a { color: var(--green); }
+
+  /* 語言切換。沒有 JavaScript 時兩種語言都會顯示 —— 讀得到永遠比好看重要。 */
+  .langs { display: flex; gap: 8px; margin: 0 0 2.4em; flex-wrap: wrap; }
+  .langs button {
+    font: inherit;
+    font-size: 0.9rem;
+    padding: 6px 16px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
+  .langs button[aria-pressed="true"] {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--cream);
+  }
+  section + section { margin-top: 3.5em; }
+
   footer {
     margin-top: 4em;
     padding-top: 1.4em;
@@ -65,7 +77,7 @@
     font-size: 0.88rem;
   }
   @media (max-width: 480px) {
-    body { padding: 32px 18px 64px; font-size: 16px; }
+    body { padding: 28px 18px 64px; font-size: 16px; }
     h1 { font-size: 1.55rem; }
   }
 </style>
@@ -73,60 +85,303 @@
 <body>
 <main>
 
-  <h1>隱私權政策</h1>
-  <p class="updated">推肉肉小工具 — 筆刷液化修圖　·　最後更新：2026 年 9 月 15 日</p>
+  <nav class="langs" id="langs" hidden>
+    <button type="button" data-pick="zh" aria-pressed="true">中文</button>
+    <button type="button" data-pick="en" aria-pressed="false">English</button>
+  </nav>
 
-  <div class="summary">
-    <p><strong>推肉肉小工具不蒐集任何資料。你的照片不會離開你的裝置。</strong></p>
-  </div>
+  <!-- ─────────── 繁體中文 ─────────── -->
+  <section data-lang="zh" lang="zh-Hant">
+    <h1>隱私權政策</h1>
+    <p class="updated">推肉肉小工具 — 筆刷液化修圖　·　最後更新：2026 年 10 月 22 日</p>
 
-  <h2>我們不蒐集什麼</h2>
-  <p>這個 App 不蒐集、不儲存、不傳輸任何個人資料。具體而言：</p>
-  <ul>
-    <li><strong>不蒐集</strong>你的照片或照片的任何內容</li>
-    <li><strong>不蒐集</strong>裝置識別碼、廣告識別碼或使用行為分析</li>
-    <li><strong>不蒐集</strong>姓名、電子郵件、電話或任何聯絡方式</li>
-    <li><strong>沒有</strong>帳號系統，因此不需要註冊</li>
-  </ul>
+    <div class="summary">
+      <p><strong>你的照片不會離開你的裝置。</strong>從 1.4 版起，App 會回報一小份匿名的使用統計，你可以在設定裡關掉。</p>
+    </div>
 
-  <h2>照片如何被處理</h2>
-  <p>
-    你選取的照片全程在你的裝置上處理。修圖運算使用裝置本身的繪圖晶片完成，
-    過程中不會有任何資料被傳送到網路上。
-  </p>
-  <p>
-    這個 App 也<strong>不會要求讀取你的相簿</strong>。它使用 iOS 系統提供的照片選取器，
-    該選取器由系統管理，只會把你主動選取的那一張照片交給 App。
-    換句話說，即使 App 想讀取你的其他照片，在技術上也做不到。
-  </p>
-  <p>
-    匯出時 App 會要求「加入照片」權限，用途僅限於把你修好的那張照片存回你的相簿。
-  </p>
+    <h2>我們不蒐集什麼</h2>
+    <p>這個 App 不蒐集、不儲存、不傳輸任何個人資料。具體而言：</p>
+    <ul>
+      <li><strong>不蒐集</strong>你的照片或照片的任何內容</li>
+      <li><strong>不蒐集</strong>廣告識別碼，也不做跨 App 或跨網站的追蹤</li>
+      <li><strong>不蒐集</strong>姓名、電子郵件、電話或任何聯絡方式</li>
+      <li><strong>沒有</strong>帳號系統，因此不需要註冊</li>
+    </ul>
 
-  <h2>付費</h2>
-  <p>
-    購買透過 Apple 的 App Store 處理。我們不會接觸到你的付款資訊。
-    Apple 如何處理這些資料，請參閱 Apple 的隱私權政策。
-  </p>
+    <h2>照片如何被處理</h2>
+    <p>
+      你選取的照片全程在你的裝置上處理。修圖運算使用裝置本身的繪圖晶片完成，
+      過程中不會有任何資料被傳送到網路上。
+    </p>
+    <p>
+      這個 App 也<strong>不會要求讀取你的相簿</strong>。它使用 iOS 系統提供的照片選取器，
+      該選取器由系統管理，只會把你主動選取的那一張照片交給 App。
+      換句話說，即使 App 想讀取你的其他照片，在技術上也做不到。
+    </p>
+    <p>
+      匯出時 App 會要求「加入照片」權限，用途僅限於把你修好的那張照片存回你的相簿。
+    </p>
 
-  <h2>第三方</h2>
-  <p>這個 App 不包含任何第三方分析、廣告或追蹤套件。</p>
+    <h2>使用統計（1.4 版起）</h2>
+    <p>
+      為了知道哪些功能真的被用到、該把時間花在哪裡，App 會回報一份匿名的使用統計。
+      <strong>1.4 之前的版本不回報任何東西。</strong>
+    </p>
+    <p>送出去的只有「某個功能被打開過」這件事，目前總共八項：</p>
+    <ul>
+      <li>App 被開啟</li>
+      <li>選了一張照片</li>
+      <li>切換到自動調整</li>
+      <li>自動調整偵測不到臉</li>
+      <li>拉動了自動調整的滑桿</li>
+      <li>使用了手動筆刷</li>
+      <li>成功匯出一張照片</li>
+      <li>看到解鎖頁面</li>
+    </ul>
+    <p>
+      <strong>不會送出照片</strong>，也不會送出照片的尺寸或內容、偵測到幾張臉、
+      滑桿拉到多少。同一張照片裡重複的操作只算一次。
+      另外，安裝後的第一次啟動會額外送出一次安裝事件，內容只有安裝日期。
+    </p>
 
-  <h2>兒童</h2>
-  <p>由於本 App 不蒐集任何資料，因此也不會蒐集兒童的資料。</p>
+    <h3>每一筆事件還夾帶哪些資訊</h3>
+    <p>
+      這些由 TelemetryDeck 的 SDK 自動附加，<strong>我們沒有辦法關掉它們</strong>。
+      既然關不掉，就全部列出來 —— 以下是實際攔下封包確認過的完整內容：
+    </p>
+    <ul>
+      <li><strong>識別碼</strong>：一組每次安裝各自獨立的匿名雜湊值，以及一組工作階段編號</li>
+      <li><strong>時間</strong>：收到時間、時區，以及星期幾、幾點、第幾週、月份、季、是否週末</li>
+      <li><strong>App</strong>：版本與建置編號</li>
+      <li><strong>裝置</strong>：機型、處理器架構、作業系統與版本、螢幕解析度與縮放倍率、畫面方向</li>
+      <li><strong>執行環境</strong>：是模擬器、除錯版、TestFlight 還是 App Store 版</li>
+      <li><strong>語言與地區</strong>：偏好語言、地區、語系設定</li>
+      <li><strong>顯示偏好</strong>：淺色或深色模式、書寫方向（由左至右／由右至左）</li>
+      <li><strong>輔助使用設定</strong>：粗體文字、文字大小、降低動態效果、降低透明度、
+          反轉顏色、加深系統色彩、不以顏色區分</li>
+      <li><strong>使用統計</strong>：首次使用日期、累計使用天數、最近一個月使用天數、
+          總啟動次數、平均與上一次的使用時長</li>
+      <li><strong>SDK</strong>：TelemetryDeck SDK 的名稱與版本</li>
+    </ul>
+    <p>
+      這些欄位單看都不指向特定個人，但<strong>組合起來會形成一個相當獨特的裝置特徵</strong>。
+      我們不用它來辨識任何人，TelemetryDeck 也不儲存 IP 位址，但你有權知道這件事。
+      不想提供的話，把下面說的開關關掉就完全不會送。
+    </p>
+    <p>
+      <strong>你可以隨時關掉。</strong>打開 App 首頁右上角的齒輪，
+      把「分享匿名使用統計」切成「已關閉」。關掉之後完全不送。
+    </p>
 
-  <h2>政策變更</h2>
-  <p>
-    若未來版本新增任何會蒐集資料的功能，本政策會先行更新，並在 App 內明確告知。
-  </p>
+    <h2>付費</h2>
+    <p>
+      購買透過 Apple 的 App Store 處理。我們不會接觸到你的付款資訊。
+      Apple 如何處理這些資料，請參閱 Apple 的隱私權政策。
+    </p>
 
-  <h2>聯絡方式</h2>
-  <p>有任何疑問請來信：<a href="mailto:tuiroulo.app@gmail.com">tuiroulo.app@gmail.com</a></p>
+    <h2>第三方</h2>
+    <p>
+      上述的使用統計由 <strong>TelemetryDeck GmbH</strong>（Von-der-Tann-Str. 54,
+      86159 Augsburg, Germany）處理，伺服器位於德國與歐洲各地。他們收到的是：
+      一個每次安裝各自獨立、無法回溯到個人的匿名識別碼；一個取整到小時的時間戳記；
+      以及系統版本、App 版本與機型。<strong>IP 位址不會被儲存</strong>，
+      不論在伺服器紀錄或資料庫裡都沒有。他們的 SDK 是開源的。
+    </p>
+    <p>這個 App 不包含任何廣告套件，也沒有任何跨 App 或跨網站的追蹤。</p>
+
+    <h2>回報問題</h2>
+    <p>
+      設定裡的「回報問題或給建議」會用你裝置上的郵件 App 開啟一封草稿，
+      並預先填入 App 版本、機型、iOS 版本與介面語言，方便重現問題。
+      那是一封<strong>你看得到、改得動、也刪得掉</strong>的草稿，
+      按下寄出才會送出。如果你選擇寄信，我自然會看到你的電子郵件地址 ——
+      那是你主動寄信的結果，App 本身沒有蒐集它。
+    </p>
+
+    <h2>兒童</h2>
+    <p>
+      本 App 不會要求、也不會蒐集姓名、年齡或任何聯絡方式，因此不會蒐集兒童的個人資料。
+      上述的使用統計同樣不含任何可辨識個人的資訊。
+    </p>
+
+    <h2>政策變更</h2>
+    <p>若未來版本新增任何會蒐集資料的功能，本政策會先行更新，並在 App 內明確告知。</p>
+
+    <h2>聯絡方式</h2>
+    <p>有任何疑問請來信：<a href="mailto:tuiroulo.app@gmail.com">tuiroulo.app@gmail.com</a></p>
+  </section>
+
+  <!-- ─────────── English ─────────── -->
+  <section data-lang="en" lang="en">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Liquify — Body &amp; Face Editor　·　Last updated: 22 October 2026</p>
+
+    <div class="summary">
+      <p><strong>Your photos never leave your device.</strong> From version 1.4, the app reports a small amount of anonymous usage data, which you can turn off in Settings.</p>
+    </div>
+
+    <h2>What we do not collect</h2>
+    <p>This app does not collect, store or transmit any personal data. Specifically:</p>
+    <ul>
+      <li><strong>No</strong> photos, and nothing contained in them</li>
+      <li><strong>No</strong> advertising identifiers, and no tracking across apps or websites</li>
+      <li><strong>No</strong> name, email address, phone number or any other contact details</li>
+      <li><strong>No</strong> account system, so there is nothing to sign up for</li>
+    </ul>
+
+    <h2>How your photos are handled</h2>
+    <p>
+      Every photo you select is processed entirely on your device. The editing work is
+      done by the device's own graphics chip, and nothing is transmitted over the network
+      at any point.
+    </p>
+    <p>
+      The app also <strong>does not ask to read your photo library</strong>. It uses the
+      photo picker provided by iOS, which is managed by the system and hands the app only
+      the single photo you chose. In other words, even if the app wanted to read your
+      other photos, it has no technical means of doing so.
+    </p>
+    <p>
+      When you export, the app asks for “Add Photos Only” permission. That is used for one
+      thing: saving your edited photo back to your library.
+    </p>
+
+    <h2>Usage data (from version 1.4)</h2>
+    <p>
+      So that I can tell which features are actually used and where my time is best spent,
+      the app reports anonymous usage data.
+      <strong>Versions before 1.4 report nothing at all.</strong>
+    </p>
+    <p>What is sent is only the fact that a feature was opened — eight things in total:</p>
+    <ul>
+      <li>The app was opened</li>
+      <li>A photo was picked</li>
+      <li>Auto adjust was opened</li>
+      <li>Auto adjust found no face</li>
+      <li>An auto adjust slider was moved</li>
+      <li>A manual brush was used</li>
+      <li>A photo was exported successfully</li>
+      <li>The unlock screen was shown</li>
+    </ul>
+    <p>
+      <strong>No photo is sent</strong>, nor its size or contents, nor how many faces were
+      found, nor how far a slider was moved. Repeated actions on the same photo count
+      once. In addition, the first launch after installing sends one install event whose
+      only content is the install date.
+    </p>
+
+    <h3>What else rides along with each event</h3>
+    <p>
+      The following is attached automatically by TelemetryDeck's SDK and
+      <strong>there is no way for us to switch it off</strong>. Since it cannot be
+      removed, here is all of it — verified by capturing an actual request:
+    </p>
+    <ul>
+      <li><strong>Identifiers</strong>: an anonymous hash that is separate for each
+          installation, plus a session identifier</li>
+      <li><strong>Time</strong>: when it was received, the time zone, and the day of week,
+          hour, week, month, quarter and whether it is a weekend</li>
+      <li><strong>App</strong>: version and build number</li>
+      <li><strong>Device</strong>: model, processor architecture, operating system and
+          version, screen resolution and scale factor, screen orientation</li>
+      <li><strong>Run context</strong>: whether this is a simulator, a debug build,
+          TestFlight or the App Store build</li>
+      <li><strong>Language and region</strong>: preferred language, region, locale</li>
+      <li><strong>Display preferences</strong>: light or dark mode, writing direction</li>
+      <li><strong>Accessibility settings</strong>: bold text, text size, reduce motion,
+          reduce transparency, invert colours, darker system colours, differentiate
+          without colour</li>
+      <li><strong>Usage statistics</strong>: first-use date, total days used, days used in
+          the last month, total launches, average and previous session length</li>
+      <li><strong>SDK</strong>: the name and version of the TelemetryDeck SDK</li>
+    </ul>
+    <p>
+      No single field here points to a particular person, but
+      <strong>taken together they form a fairly distinctive device fingerprint</strong>.
+      We do not use it to identify anyone, and TelemetryDeck does not store IP addresses,
+      but you have a right to know. If you would rather not provide it, the switch
+      described below stops all of it.
+    </p>
+    <p>
+      <strong>You can turn this off at any time.</strong> Tap the gear in the top right of
+      the app's home screen and switch “Share anonymous usage stats” to “Off”. Once it is
+      off, nothing is sent.
+    </p>
+
+    <h2>Payments</h2>
+    <p>
+      Purchases are handled by Apple's App Store. We never see your payment details.
+      For how Apple handles that data, please refer to Apple's own privacy policy.
+    </p>
+
+    <h2>Third parties</h2>
+    <p>
+      The usage data described above is processed by <strong>TelemetryDeck GmbH</strong>
+      (Von-der-Tann-Str. 54, 86159 Augsburg, Germany), on servers in Germany and across
+      Europe. What they receive is: an anonymous identifier that is separate for each
+      installation and cannot be traced back to a person; a timestamp rounded to the
+      nearest hour; and the system version, app version and device type.
+      <strong>IP addresses are not stored</strong>, neither in logs nor in the database.
+      Their SDK is open source.
+    </p>
+    <p>This app contains no advertising SDKs and does no tracking across apps or websites.</p>
+
+    <h2>Reporting a problem</h2>
+    <p>
+      “Report a problem or suggest something” in Settings opens a draft in the mail app on
+      your device, pre-filled with the app version, device model, iOS version and interface
+      language so that problems can be reproduced. It is a draft
+      <strong>you can read, edit and delete</strong>, and nothing is sent until you send
+      it. If you do write to me, I will of course see your email address — that is a
+      result of you sending a message, not something the app collects.
+    </p>
+
+    <h2>Children</h2>
+    <p>
+      This app does not ask for or collect names, ages or contact details, so it collects
+      no personal data from children. The usage data described above likewise contains
+      nothing that identifies a person.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      If a future version adds any feature that collects data, this policy will be updated
+      first, and the change will be stated clearly inside the app.
+    </p>
+
+    <h2>Contact</h2>
+    <p>Questions: <a href="mailto:tuiroulo.app@gmail.com">tuiroulo.app@gmail.com</a></p>
+  </section>
 
   <footer>
-    推肉肉小工具　·　開發者 YiHsuan Chen
+    推肉肉小工具 / Liquify　·　YiHsuan Chen
   </footer>
 
 </main>
+
+<script>
+  // 切換只在 JavaScript 可用時才啟動。壞掉的話兩種語言都會完整顯示，
+  // 讀得到永遠比好看重要 —— 這一頁是上架的必要條件，不能有「打不開」的狀態。
+  (function () {
+    var nav = document.getElementById('langs');
+    var sections = document.querySelectorAll('section[data-lang]');
+    var buttons = nav.querySelectorAll('button');
+
+    function show(pick) {
+      sections.forEach(function (s) { s.hidden = s.dataset.lang !== pick; });
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.dataset.pick === pick));
+      });
+      document.documentElement.lang = pick === 'zh' ? 'zh-Hant' : 'en';
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { show(b.dataset.pick); });
+    });
+
+    nav.hidden = false;
+    show((navigator.language || 'en').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en');
+  })();
+</script>
 </body>
 </html>
